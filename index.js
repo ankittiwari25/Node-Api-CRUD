@@ -9,7 +9,7 @@ const createCronJob = require('./config/cron-job/add_record_in_every_1_min');
 const port=3000;
 
 app.get('/',(req,res)=>{
-    res.send("This is simple route");
+    getTerm(res,req);
 });
 
  function getTerm(rer,res) {
