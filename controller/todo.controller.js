@@ -163,3 +163,5 @@ exports.searchTodo = async (req, res) => {
     data: cursor,
   });
 };
+
+exports.termsAndCondition()
