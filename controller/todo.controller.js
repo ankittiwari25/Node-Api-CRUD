@@ -172,7 +172,7 @@ exports.termsAndCondition = async (req, res) => {
       // Write the HTML content to the response
       const htmlContent =
         "<html><body><h1>Terms and Conditions</h1><p>This is your terms and conditions content.</p></body></html>";
-      res.end(htmlContent);
+      res.send(htmlContent);
     } else {
       // Handle other routes or methods
       res.statusCode = 404;
