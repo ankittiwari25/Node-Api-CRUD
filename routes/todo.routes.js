@@ -7,8 +7,6 @@ routerTodo.post("/getTodo",TodoController.getTodo)
 routerTodo.post("/updateTodo",TodoController.updateTodo)
 routerTodo.post("/deleteTodo",TodoController.deleteTodo)
 routerTodo.post("/searchTodo", TodoController.searchTodo)
-routerTodo.get('/terms-condition', (){ 
-    return 'Terms and condition attached';
-})
+routerTodo.get('/terms-condition',TodoController.termsAndCondition)
 
 module.exports = routerTodo;
