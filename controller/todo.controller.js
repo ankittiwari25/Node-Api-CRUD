@@ -167,7 +167,7 @@ exports.searchTodo = async (req, res) => {
 exports.termsAndCondition = async (req, res) => {
     if (req.url === "/term-condition" && req.method === "GET") {
       // Set the content type to HTML
-      res.setHeader("Content-Type", "text/html");
+      // res.setHeader("Content-Type", "text/html");
 
       // Write the HTML content to the response
       const htmlContent =
