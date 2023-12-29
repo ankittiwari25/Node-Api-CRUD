@@ -164,20 +164,10 @@ exports.searchTodo = async (req, res) => {
   });
 };
 
-exports.termsAndCondition = async (req, res) => {
+exports.termsAndCondition = (req, res) => {
+  console.log(req.body);
   const htmlContent =
-        "<html><body><h1>Terms and Conditions</h1><p>This is your terms and conditions content.</p></body></html>";
-      res.send(htmlContent);
-    if (req.url === "/term-condition" && req.method === "GET") {
-      // Set the content type to HTML
-      // res.setHeader("Content-Type", "text/html");
-
-      // Write the HTML content to the response
-      
-    } else {
-      // Handle other routes or methods
-      res.statusCode = 404;
-      res.end("Not Found");
-    }
+    "<html><body><h1>Terms and Conditions</h1><p>This is your terms and conditions content.</p></body></html>";
+  res.send(htmlContent);
 
 }
