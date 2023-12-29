@@ -9,12 +9,8 @@ const createCronJob = require('./config/cron-job/add_record_in_every_1_min');
 const port=3000;
 
 app.get('/',(req,res)=>{
-    getTerm(res,req);
+    res.send("This is simple route");
 });
-
- function getTerm(rer,res) {
-     res.send("fknmfnfnmfdnmdnf");
-}
 
 app.listen(port,()=>{
     console.log('Server is running on the port http://localhost:'+port);
