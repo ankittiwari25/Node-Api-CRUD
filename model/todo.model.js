@@ -16,6 +16,9 @@ const todoSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  currentDate: {
+    type: Date
+  }
 });
 const TodoModel = db.model("todo", todoSchema);
 module.exports = TodoModel;

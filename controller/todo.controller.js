@@ -18,8 +18,14 @@ exports.createTodo = async (req, res) => {
     const userId = userIdFromJWT.userId;
     const description = req.body.description;
     const title = req.body.title;
+    const currentDate = new Date();
 
-    let todo = TodoServices.createTodo({ userId, title, description });
+    let todo = TodoServices.createTodo({
+      userId,
+      title,
+      description,
+      currentDate,
+    });
 
     res
       .status(200)
