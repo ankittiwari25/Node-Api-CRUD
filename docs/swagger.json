@@ -3,7 +3,7 @@
   "info": {
     "version": "2.0.0",
     "title": "CloudAgent Apis",
-    "description": "API for Managing queue calls",
+    "description": "API for Managing todo calls",
     "contact": {
       "name": "API Support",
       "email": "tiwariankit496@gmail.com"
