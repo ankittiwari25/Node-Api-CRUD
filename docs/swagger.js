@@ -19,7 +19,7 @@ const doc = {
     description: "API for Managing queue calls", // by default: ''
     contact: {
       name: "API Support",
-      email: "rajputankit22@gmail.com",
+      email: "tiwariankit496@gmail.com",
     },
   },
   host: "localhost:3000", // by default: 'localhost:3000'
@@ -34,8 +34,8 @@ const doc = {
       description: "Queue related apis", // Tag description
     },
     {
-      name: "Health",
-      description: "Health Check",
+      name: "Todo",
+      description: "Todo App",
     },
   ],
   securityDefinitions: {}, // by default: empty object

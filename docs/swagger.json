@@ -2,8 +2,8 @@
   "swagger": "2.0",
   "info": {
     "version": "2.0.0",
-    "title": "Todo Apis",
-    "description": "API for Managing todo calls",
+    "title": "CloudAgent Apis",
+    "description": "API for Managing queue calls",
     "contact": {
       "name": "API Support",
       "email": "tiwariankit496@gmail.com"
@@ -13,18 +13,24 @@
   "basePath": "/",
   "tags": [
     {
-      "name": "TODO CRUD",
-      "description": "Todo related apis"
+      "name": "Queue CRUD",
+      "description": "Queue related apis"
     },
     {
-      "name": "TODO",
-      "description": "Todo app for node js development"
+      "name": "Todo",
+      "description": "Todo App"
     }
   ],
-  "schemes": ["http"],
+  "schemes": [
+    "http"
+  ],
   "securityDefinitions": {},
-  "consumes": ["application/json"],
-  "produces": ["application/json"],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
   "paths": {
     "/registration": {
       "post": {
@@ -37,10 +43,10 @@
               "type": "object",
               "properties": {
                 "email": {
-                  "example": "Enter your email"
+                  "example": "any"
                 },
                 "password": {
-                  "example": "Enter your password"
+                  "example": "any"
                 }
               }
             }
@@ -50,23 +56,8 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "The request was malformed or invalid. Please check the request parameters."
-          },
-          "401": {
-            "description": "Authentication failed or user lacks proper authorization."
-          },
-          "403": {
-            "description": "You do not have permission to access this resource."
-          },
-          "404": {
-            "description": "The requested resource could not be found on the server."
-          },
           "422": {
-            "description": "Oops! We couldn't process your request due to errors in the provided data. Please review and correct the input."
-          },
-          "500": {
-            "description": "An unexpected error occurred on the server. Please try again later."
+            "description": "Unprocessable Entity"
           }
         }
       }
@@ -100,23 +91,11 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "The request was malformed or invalid. Please check the request parameters."
-          },
           "401": {
-            "description": "Authentication failed or user lacks proper authorization."
-          },
-          "403": {
-            "description": "You do not have permission to access this resource."
+            "description": "Unauthorized"
           },
           "404": {
-            "description": "The requested resource could not be found on the server."
-          },
-          "422": {
-            "description": "Oops! We couldn't process your request due to errors in the provided data. Please review and correct the input."
-          },
-          "500": {
-            "description": "An unexpected error occurred on the server. Please try again later."
+            "description": "Not Found"
           }
         }
       }
@@ -150,23 +129,8 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "The request was malformed or invalid. Please check the request parameters."
-          },
           "401": {
-            "description": "Authentication failed or user lacks proper authorization."
-          },
-          "403": {
-            "description": "You do not have permission to access this resource."
-          },
-          "404": {
-            "description": "The requested resource could not be found on the server."
-          },
-          "422": {
-            "description": "Oops! We couldn't process your request due to errors in the provided data. Please review and correct the input."
-          },
-          "500": {
-            "description": "An unexpected error occurred on the server. Please try again later."
+            "description": "Unauthorized"
           }
         }
       }
@@ -185,20 +149,11 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "The request was malformed or invalid. Please check the request parameters."
-          },
           "401": {
-            "description": "Authentication failed or user lacks proper authorization."
-          },
-          "403": {
-            "description": "You do not have permission to access this resource."
+            "description": "Unauthorized"
           },
           "404": {
-            "description": "The requested resource could not be found on the server."
-          },
-          "500": {
-            "description": "An unexpected error occurred on the server. Please try again later."
+            "description": "Not Found"
           }
         }
       }
@@ -232,23 +187,14 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "The request was malformed or invalid. Please check the request parameters."
-          },
           "401": {
-            "description": "Authentication failed or user lacks proper authorization."
-          },
-          "403": {
-            "description": "You do not have permission to access this resource."
+            "description": "Unauthorized"
           },
           "404": {
-            "description": "The requested resource could not be found on the server."
-          },
-          "422": {
-            "description": "Oops! We couldn't process your request due to errors in the provided data. Please review and correct the input."
+            "description": "Not Found"
           },
           "500": {
-            "description": "An unexpected error occurred on the server. Please try again later."
+            "description": "Internal Server Error"
           }
         }
       }
@@ -279,23 +225,11 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "The request was malformed or invalid. Please check the request parameters."
-          },
           "401": {
-            "description": "Authentication failed or user lacks proper authorization."
-          },
-          "403": {
-            "description": "You do not have permission to access this resource."
-          },
-          "404": {
-            "description": "The requested resource could not be found on the server."
-          },
-          "422": {
-            "description": "Oops! We couldn't process your request due to errors in the provided data. Please review and correct the input."
+            "description": "Unauthorized"
           },
           "500": {
-            "description": "An unexpected error occurred on the server. Please try again later."
+            "description": "Internal Server Error"
           }
         }
       }
@@ -326,30 +260,15 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "The request was malformed or invalid. Please check the request parameters."
-          },
           "401": {
-            "description": "Authentication failed or user lacks proper authorization."
-          },
-          "403": {
-            "description": "You do not have permission to access this resource."
-          },
-          "404": {
-            "description": "The requested resource could not be found on the server."
-          },
-          "422": {
-            "description": "Oops! We couldn't process your request due to errors in the provided data. Please review and correct the input."
-          },
-          "500": {
-            "description": "An unexpected error occurred on the server. Please try again later."
+            "description": "Unauthorized"
           }
         }
       }
     }
   },
   "definitions": {
-    "helathResponse": {
+    "todoResponse": {
       "type": "object",
       "properties": {
         "code": {
@@ -371,7 +290,20 @@
         },
         "message": {
           "type": "string",
-          "example": "No found 400"
+          "example": "The request was malformed or invalid. Please check the request parameters."
+        }
+      }
+    },
+    "errorResponse.401": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "example": 401
+        },
+        "message": {
+          "type": "string",
+          "example": "Authentication failed or user lacks proper authorization."
         }
       }
     },
@@ -384,7 +316,7 @@
         },
         "message": {
           "type": "string",
-          "example": "No found 403"
+          "example": "You do not have permission to access this resource."
         }
       }
     },
@@ -397,7 +329,7 @@
         },
         "message": {
           "type": "string",
-          "example": "Not found 404"
+          "example": "The requested resource could not be found on the server."
         }
       }
     },
@@ -410,7 +342,7 @@
         },
         "message": {
           "type": "string",
-          "example": "Server Error"
+          "example": "An unexpected error occurred on the server. Please try again later."
         }
       }
     }
