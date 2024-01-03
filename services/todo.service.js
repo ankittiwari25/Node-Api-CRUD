@@ -11,10 +11,14 @@ class TodoServices {
     }
   }
   /// get TODO from the database
-  static async getTodoData(userIdDB) {
+  static async getTodoData(userIdDB, page, limit) {
     console.log("getTodoData call");
     try {
-      let data = await TodoModel.find({ userId: userIdDB });
+      /// this is pagination query
+      /// .skip((page-1)*limit).limit(limit) remove this line for getting all data in same time
+      let data = await TodoModel.find({ userId: userIdDB })
+        .skip((page - 1) * limit)
+        .limit(limit);
       return data;
     } catch (error) {
       throw error.me;
@@ -64,7 +68,7 @@ class TodoServices {
     try {
       const regex = new RegExp(searchText, "i");
       let cursor = await TodoModel.find({
-        'title': { $regex: regex},
+        title: { $regex: regex },
       });
       return cursor;
     } catch (error) {}

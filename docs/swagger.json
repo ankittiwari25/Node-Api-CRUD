@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2.0.0",
-    "title": "CloudAgent Apis",
+    "version": "1.0.0",
+    "title": "Todo Apis",
     "description": "API for Managing todo calls",
     "contact": {
       "name": "API Support",
@@ -13,8 +13,8 @@
   "basePath": "/",
   "tags": [
     {
-      "name": "Queue CRUD",
-      "description": "Queue related apis"
+      "name": "TODO CRUD",
+      "description": "TODO related apis"
     },
     {
       "name": "Todo",
@@ -142,6 +142,16 @@
           {
             "name": "authorization",
             "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
             "type": "string"
           }
         ],

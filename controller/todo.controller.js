@@ -48,7 +48,9 @@ exports.getTodo = async (req, res) => {
     }
     const tokenFromHeader = req.headers.authorization.split(" ")[1];
     const userIdFromJWT = jwt.verify(tokenFromHeader, "Ankit1234");
-    let todoArray = await TodoServices.getTodoData(userIdFromJWT.userId);
+     const page = parseInt(req.query.page) || 1;
+     const limit = parseInt(req.query.limit) || 2;
+    let todoArray = await TodoServices.getTodoData(userIdFromJWT.userId,page,limit);
     try {
       console.log(todoArray);
       res.status(200).json({
