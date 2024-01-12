@@ -15,7 +15,7 @@ exports.createCronJobData = async () => {
     });
     console.log("cron job data added successfully => ");
   } catch (error) {
-    console.log("error is =>" + typeof error); 
+    console.log("error is =>" , typeof error); 
     res.status(401).json({ status: false, message: error, data: {} });
   }
 };

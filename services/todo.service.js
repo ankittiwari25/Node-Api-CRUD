@@ -16,9 +16,7 @@ class TodoServices {
     try {
       /// this is pagination query
       /// .skip((page-1)*limit).limit(limit) remove this line for getting all data in same time
-      let data = await TodoModel.find({ userId: userIdDB })
-        .skip((page - 1) * limit)
-        .limit(limit);
+      let data = await TodoModel.find({ userId: userIdDB }).skip((page - 1) * limit).limit(limit);
       return data;
     } catch (error) {
       throw error.me;

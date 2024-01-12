@@ -15,6 +15,9 @@ const userSchema = mongoose.Schema({
   },
   jwtToken:{
     type:String
+  },
+  date: {
+    type:Date
   }
 });
 userSchema.pre("save", async function () {
