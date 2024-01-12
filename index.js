@@ -26,6 +26,12 @@ app.get("/", (req, res) => {
 
 app.get("/terms-condition", TodoController.termsAndCondition);
 
+// Serve the assetlinks.json file
+app.get('/.well-known/assetlinks.json', (req, res) => {
+  res.sendFile(__dirname + '/assetlinks.json');
+});
+
+
 app.listen(port, () => {
   console.log("Server is running on the port http://localhost:" + port);
 });
