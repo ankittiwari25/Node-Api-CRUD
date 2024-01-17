@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
    res.end(img); 
 
   });
-});
+});  
 
 app.get("/terms-condition", TodoController.termsAndCondition);
 
