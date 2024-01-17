@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 app.get("/terms-condition", TodoController.termsAndCondition);
 
 // Serve the assetlinks.json file
-app.get('/.well-know/assetlinks.json', (req, res) => {
+app.get('/.well-known/assetlinks.json', (req, res) => {
   res.sendFile(__dirname + '/assetlink.json');
 });
 
