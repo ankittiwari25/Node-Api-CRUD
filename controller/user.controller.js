@@ -87,7 +87,7 @@ exports.login = async (req, res) => {
   }
 };
 
-exports.forgotPassword = (req, res) => {
+exports.forgotPassword =async (req, res) => {
   const { email } = req.body;
 
   UserModel.findOne({ email }, (error, user) => {
