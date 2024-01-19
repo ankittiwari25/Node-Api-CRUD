@@ -13,13 +13,10 @@ const userSchema = mongoose.Schema({
   password: {
     type: String,
   },
-  jwtToken:{
-    type:String
-  },
-  date: {
-    type:Date
+  resetLink:{
+    data: String,
   }
-});
+},{timestamps: true});
 userSchema.pre("save", async function () {
   try {
     var user = this;
