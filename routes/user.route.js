@@ -5,6 +5,6 @@ const SendPushNotification = require("../firasebase/firebase.config");
 router.post('/registration',UserController.register);
 router.post('/login', UserController.login);
 router.post("/sendPushNotification", SendPushNotification.sendNotification);
-router.put("/forgot-password", UserController.forgotPassword);
+router.put("/forgot_password", UserController.forgotPassword);
 
 module.exports=router;
